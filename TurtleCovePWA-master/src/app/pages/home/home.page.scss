@@ -1,0 +1,29 @@
+.button-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.button-container {
+  padding: 0 5px 5px 5px;
+}
+
+ion-button {
+  flex: 1 1 50%;
+  min-width: 0;
+  ion-icon {
+    padding-right: 0.5em;
+  }
+}
+
+ion-card {
+  ion-card-header {
+    padding: 10px 25px 5px 25px;
+    ion-card-title {
+      margin: 5px 0 0 0;
+    }
+  }
+  ion-card-content {
+    padding-top: 5px !important;
+  }
+}

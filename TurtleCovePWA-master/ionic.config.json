@@ -1,0 +1,8 @@
+{
+  "name": "tcoveapp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

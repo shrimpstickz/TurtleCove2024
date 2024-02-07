@@ -1,0 +1,12 @@
+{
+  "appId": "com.turtlecove.selu",
+  "appName": "Turtle Cove",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "backgroundColor": "#096434"
+    }
+  }
+}

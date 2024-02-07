@@ -1,0 +1,23 @@
+ion-toolbar {
+  --background: transparent;
+}
+
+ion-content {
+  --background: rgba(44, 39, 45, 0.84);
+  // --background: transparent;
+}
+
+ion-card {
+  display: flex;
+  flex-flow: column;
+  margin-top: 0;
+  margin-bottom: auto;
+  max-height: calc(100% - 10px);
+}
+
+ion-card-content {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  padding-top: 0;
+  padding-bottom: 0;
+}
