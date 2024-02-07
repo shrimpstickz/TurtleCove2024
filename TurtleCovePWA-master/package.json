@@ -34,8 +34,12 @@
     "cordova-ios": "^5.1.1",
     "core-js": "^3.5.0",
     "eslint": "^6.7.2",
+    "formidable": "^2.1.2",
     "rxjs": "~6.5.3",
+    "semver": "^7.6.0",
+    "superagent": "^8.1.2",
     "tslib": "^1.10.0",
+    "uuid": "^9.0.1",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
