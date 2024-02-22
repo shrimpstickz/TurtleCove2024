@@ -29,7 +29,7 @@ The Turtle Cove Mobile App is a companion app for the Turtle Cove Environmental 
 
 #### Testing and Building the project
 
-1.  To test a live development version of the app locally, run `ionic serve`.
+1.  To test a live development version of the app locally, run `ionic serve` .
 2.  To test a live production version of the app locally, run `ionic serve`.
 3.  To build a development build of the app, run `ionic build`.
 4.  To build a production build of the app for release, run `ionic build –prod`.
