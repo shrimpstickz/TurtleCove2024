@@ -2,7 +2,7 @@ import { InstallCounterService } from './services/install-counter/install-counte
 import { PluginsService } from 'src/app/services/plugins-service/plugins.service';
 import { Component } from '@angular/core';
 
-import { StatusBar, StatusBarStyle, Style } from '@capacitor/status-bar';
+import { StatusBar, Style } from '@capacitor/status-bar';
 import { SplashScreen } from '@capacitor/splash-screen';
 
 
@@ -21,7 +21,7 @@ export class AppComponent {
     //   this.installCounter.incrementCount();
     // });
     StatusBar.setStyle({
-      style: StatusBarStyle.Dark
+      style: Style.Dark
     });
     StatusBar.setBackgroundColor({ color: '#08582e' });
     SplashScreen.hide();

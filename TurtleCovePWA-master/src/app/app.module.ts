@@ -13,6 +13,9 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TabsPage } from './pages/tabs/tabs.page';
 
+import { register } from 'swiper/element/bundle';
+register();
+
 @NgModule({
   declarations: [AppComponent, TabsPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
