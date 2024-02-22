@@ -8,8 +8,8 @@ The Turtle Cove Mobile App is a companion app for the Turtle Cove Environmental 
 
 ## Technologies Used
 
-- Ionic 4
-- Angular 8
+- Ionic 4 -> Now Ionic 7 (2024)
+- Angular 8 -> Now Angular 17 (2024)
 - TypeScript
 - Node.JS
 - HTML
