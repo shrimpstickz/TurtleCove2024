@@ -32,7 +32,6 @@
     "@ionic/storage": "^4.0.0",
     "cordova": "^12.0.0",
     "cordova-android": "^12.0.1",
-    "cordova-ios": "^7.0.1",
     "core-js": "^3.36.0",
     "eslint": "^8.56.0",
     "formidable": "^3.5.1",
@@ -93,7 +92,6 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "ios",
       "android"
     ]
   }
