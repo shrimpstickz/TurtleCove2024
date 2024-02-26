@@ -12,6 +12,6 @@ import { FilterSpeciesByNameStartsWithPipe } from './pipes/filter-species-by-nam
   imports: [CommonModule, IonicModule, RouterModule, FormsModule],
   declarations: [HeaderComponent, FilterSpeciesByNameStartsWithPipe, ZoomComponent, PwaPromptComponent],
   exports: [HeaderComponent, RouterModule, FilterSpeciesByNameStartsWithPipe, ZoomComponent, PwaPromptComponent],
-  entryComponents: [ZoomComponent]
+  
 })
 export class SharedModule {}

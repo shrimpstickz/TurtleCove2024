@@ -24,6 +24,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   declarations: [GwStopsPage, GwStopComponent, GwStopViewerComponent],
-  entryComponents: [GwStopComponent]
+  
 })
 export class GwStopsPageModule {}
