@@ -7,14 +7,21 @@ import { ModalController, NavParams } from '@ionic/angular';
   styleUrls: ['./gw-stop-viewer.component.scss'],
 })
 export class GwStopViewerComponent implements OnInit {
+  swiperConfig = {}
+onSlideChange() {
+throw new Error('Method not implemented.');
+}
+onSwiper($event: any) {
+throw new Error('Method not implemented.');
+}
 
   sliderOptions;
   private initIndex: number;
 
-  @ViewChild('slider', { read: ElementRef, static: true }) slider: ElementRef;
+  @ViewChild('slider', { read: ElementRef, static: true }) slider: any;
 
   constructor(private modalController: ModalController, private navParams: NavParams) { }
-
+ 
   ngOnInit() {
     this.initIndex = this.navParams.get('index');
 
