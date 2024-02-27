@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TabsPage } from './pages/tabs/tabs.page';
-
+import { SwiperModule } from 'swiper/angular';
 import { register } from 'swiper/element/bundle';
 register();
 
@@ -20,6 +20,7 @@ register();
   
   imports: [
     BrowserModule,
+    [SwiperModule],
   
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
