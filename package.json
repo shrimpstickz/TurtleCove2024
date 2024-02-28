@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "formidable": "^2.1.2",
-    "superagent": "^8.1.2",
-    "uuid": "^9.0.1"
-  }
-}
