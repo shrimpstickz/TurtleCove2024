@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TabsPage } from './pages/tabs/tabs.page';
-import { SwiperModule } from 'swiper/angular';
+// import { SwiperModule } from 'swiper/angular';
 import { register } from 'swiper/element/bundle';
 register();
 
@@ -19,17 +19,10 @@ register();
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   
   imports: [
-    BrowserModule,
-    [SwiperModule],
-  
-    IonicModule.forRoot(),
-    IonicStorageModule.forRoot(),
-    AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }),
-    SharedModule, 
-   
-    HttpClientModule,
-  ],
+    BrowserModule, IonicModule.forRoot(), IonicStorageModule.forRoot(), 
+    AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }), SharedModule, 
+    HttpClientModule],
+
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

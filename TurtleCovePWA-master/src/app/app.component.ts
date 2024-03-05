@@ -3,7 +3,7 @@ import { PluginsService } from 'src/app/services/plugins-service/plugins.service
 import { Component } from '@angular/core';
 
 import { StatusBar, Style } from '@capacitor/status-bar';
-import { SplashScreen } from '@capacitor/splash-screen';
+// removed import { SplashScreen } from '@capacitor/splash-screen'; only needed for mobile app
 
 
 @Component({
@@ -24,6 +24,6 @@ export class AppComponent {
       style: Style.Dark
     });
     StatusBar.setBackgroundColor({ color: '#08582e' });
-    SplashScreen.hide();
+    // removed SplashScreen.hide();
   }
 }

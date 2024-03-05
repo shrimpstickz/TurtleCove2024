@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavParams, ModalController } from '@ionic/angular';
-import { SecureStoragePlugin } from 'capacitor-secure-storage-plugin'; //was import { StoragePlugin } from '@capacitor/storage';
+import { Storage } from '@ionic/storage'; //was import { StoragePlugin } from '@capacitor/storage';
 import { ToastController } from '@ionic/angular';
 
 
