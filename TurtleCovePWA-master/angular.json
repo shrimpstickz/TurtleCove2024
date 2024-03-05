@@ -83,7 +83,7 @@
               "buildTarget": "app:build:development"
             },
             "ci": {
-              "progress": false
+              "verbose": false 
             }
           },
           "defaultConfiguration": "development"
