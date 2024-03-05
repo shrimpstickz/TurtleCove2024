@@ -30,6 +30,7 @@
     "@ionic/storage": "^4.0.0",
     "@ionic/storage-angular": "^4.0.0",
     "@types/body-parser": "^1.19.5",
+    "@types/swiper": "^6.0.0",
     "core-js": "^3.36.0",
     "formidable": "^3.5.1",
     "ionicons": "^7.2.2",
