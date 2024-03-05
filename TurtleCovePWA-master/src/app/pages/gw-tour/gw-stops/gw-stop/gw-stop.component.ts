@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage'; //was import { StoragePlugin } from '@
 import { ToastController } from '@ionic/angular';
 
 
+
 @Component({
   selector: 'tc-gw-stop',
   templateUrl: './gw-stop.component.html',

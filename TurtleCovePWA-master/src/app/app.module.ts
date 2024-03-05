@@ -10,11 +10,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TabsPage } from './pages/tabs/tabs.page';
-import { SwiperModule } from 'swiper/angular';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+import { GwStopViewerComponent } from './pages/gw-tour/gw-stops/gw-stop-viewer/gw-stop-viewer.component';
+// register Swiper custom elements
+register();
 
 
 @NgModule({
-  declarations: [AppComponent, TabsPage],
+  declarations: [AppComponent, TabsPage, GwStopViewerComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   
   imports: [
@@ -25,7 +30,9 @@ import { SwiperModule } from 'swiper/angular';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }),
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+   // NgxUsefulSwiperModule
+   
   ],
 
   providers: [

@@ -1,4 +1,5 @@
-<ion-header>
+<ion-app>
+  <ion-header>
     <ion-toolbar>
       <ion-buttons slot="primary">
         <ion-button (click)="close()" color="light">
@@ -7,12 +8,13 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
-  
+
   <ion-content fullscreen scrollY="false">
-    <swiper-container style="height: 100%;" [sliderOptions] #swiper (slidechange)="onSlideChange()">
+    <swiper-container swiper style= "height: 100%;" [sliderOptions] #swiper [config]="swiperConfig" (slideChange)="onSlideChange()">
       <swiper-slide>
         <div class="swiper-zoom-container">
         </div>
       </swiper-slide>
     </swiper-container>
   </ion-content>
+</ion-app>
