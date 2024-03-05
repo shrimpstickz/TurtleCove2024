@@ -1,6 +1,8 @@
 import { InstallCounterService } from './services/install-counter/install-counter.service';
-import { PluginsService } from 'src/app/services/plugins-service/plugins.service.ts';
+import { PluginsService } from 'src/app/services/plugins-service/plugins.service';
 import { Component } from '@angular/core';
+import { register } from 'swiper/element/bundle';
+register();
 
 //import { StatusBar, Style } from '@capacitor/status-bar';
 // removed import { SplashScreen } from '@capacitor/splash-screen'; only needed for mobile app

@@ -22,7 +22,7 @@ export class PluginsService {
 
   openUrl(url) {
     if (navigator.onLine) {
-      Browser.open({ url });
+      Browser['open']({ url });
     }
     else {
       this.presentToastWithOptions();
