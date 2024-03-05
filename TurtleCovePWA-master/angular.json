@@ -32,7 +32,7 @@
               },
               "src/manifest.json"
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["src/theme/variables.scss", "src/global.scss", "./node_modules/swiper/swiper-bundle.css" ],
             "scripts": []
           },
           "configurations": {
