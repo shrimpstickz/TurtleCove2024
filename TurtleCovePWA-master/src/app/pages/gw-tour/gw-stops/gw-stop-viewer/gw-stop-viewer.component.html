@@ -9,8 +9,8 @@
   </ion-header>
   
   <ion-content fullscreen scrollY="false">
-    <swiper-container style="height: 100%;" [options]="sliderOptions" #slider (ionSlideDidChange)="slideChanged()">
-      <swiper-slide >
+    <swiper-container style="height: 100%;" [sliderOptions] #swiper (slidechange)="onSlideChange()">
+      <swiper-slide>
         <div class="swiper-zoom-container">
         </div>
       </swiper-slide>
