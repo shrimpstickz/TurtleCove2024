@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TabsPage } from './pages/tabs/tabs.page';
-import { SwiperModule } from 'swiper/angular/swiper.module';
+import { SwiperModule } from 'swiper/angular';
 
 
 @NgModule({
@@ -18,7 +18,7 @@ import { SwiperModule } from 'swiper/angular/swiper.module';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   
   imports: [
-    SwiperModule,
+
     BrowserModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),

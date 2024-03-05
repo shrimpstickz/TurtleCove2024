@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ModalController, NavParams } from '@ionic/angular';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -6,13 +6,15 @@ import { SwiperComponent } from 'swiper/angular';
   selector: 'tc-gw-stop-viewer',
   templateUrl: './gw-stop-viewer.component.html',
   styleUrls: ['./gw-stop-viewer.component.scss'],
+  
 })
 export class GwStopViewerComponent implements OnInit {
   swiperConfig = {};
-  sliderOptions;
+  sliderOptions: { initialSlide: number; };
   private initIndex: number;
 
   @ViewChild('swiper', { static: true }) swiper?: SwiperComponent;
+
 
   constructor(private modalController: ModalController, private navParams: NavParams) {}
 

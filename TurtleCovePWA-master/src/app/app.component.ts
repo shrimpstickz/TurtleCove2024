@@ -1,6 +1,6 @@
 import { InstallCounterService } from './services/install-counter/install-counter.service';
 import { PluginsService } from 'src/app/services/plugins-service/plugins.service';
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 register();
 
@@ -10,7 +10,7 @@ register();
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
 
