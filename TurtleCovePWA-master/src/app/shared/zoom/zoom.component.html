@@ -9,13 +9,13 @@
 </ion-header>
 
 <ion-content fullscreen scrollY="false">
-  <ion-slides *ngIf="viewEntered" style="height: 100%;" [options]="sliderOptions" #slider (ionSlideDidChange)="slideChanged()">
-    <ion-slide *ngFor="let obj of imgService.images">
+  <swiper-container *ngIf="viewEntered" style="height: 100%;" [sliderOptions] #swiper (slideChange)="onSlideChange()">
+    <swiper-slide *ngFor="let obj of imgService.images">
       <div class="swiper-zoom-container">
         <img [src]="obj.path"/>
       </div>
-    </ion-slide>
-  </ion-slides>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
 
 <ion-footer no-border>

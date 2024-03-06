@@ -14,12 +14,13 @@ import { Swiper }  from 'swiper';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import { GwStopViewerComponent } from './pages/gw-tour/gw-stops/gw-stop-viewer/gw-stop-viewer.component';
+import { ZoomComponent } from './shared/zoom/zoom.component';
 // register Swiper custom elements
 register();
 
 
 @NgModule({
-  declarations: [AppComponent, TabsPage, GwStopViewerComponent],
+  declarations: [AppComponent, TabsPage, GwStopViewerComponent, ZoomComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   
   imports: [
