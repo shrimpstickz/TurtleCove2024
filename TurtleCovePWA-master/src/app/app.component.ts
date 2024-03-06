@@ -5,7 +5,7 @@ import { register } from 'swiper/element/bundle';
 register();
 
 //import { StatusBar, Style } from '@capacitor/status-bar';
-// removed import { SplashScreen } from '@capacitor/splash-screen'; only needed for mobile app
+//removed import { SplashScreen } from '@capacitor/splash-screen'; only needed for mobile app
 
 
 @Component({
