@@ -1,47 +1,50 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ModalController, NavParams } from '@ionic/angular';
+import { Component, OnInit, ViewChild, NgModule, CUSTOM_ELEMENTS_SCHEMA, ElementRef } from '@angular/core';
+import { ModalController, NavParams, IonicModule } from '@ionic/angular';
+import SwiperCore, { Swiper } from 'swiper';
+import SwiperComponent from 'swiper';
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'; //added this to fix ion-slides error
-import { Swiper, SwiperModule } from 'swiper/types'; //added this to fix ion-slides error
 
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
 
-Swiper.use([Navigation, Pagination, Scrollbar, A11y]); //added this to fix ion-slides error. remove this and above code with commented lines if unneeded
+SwiperCore.use([Swiper]);
+
 @Component({
   selector: 'tc-gw-stop-viewer',
-  templateUrl: './gw-stop-viewer.component.html', 
+  templateUrl: './gw-stop-viewer.component.html',
   styleUrls: ['./gw-stop-viewer.component.scss'],
 })
 export class GwStopViewerComponent implements OnInit {
-  swiperConfig = {};
-onSlideChange() {
-throw new Error('Method not implemented.');
-}
-onSwiper($event: any) {
-throw new Error('Method not implemented.');
-}
+  @ViewChild('swiper', { static: true }) swiper: SwiperComponent;
 
-  sliderOptions;
+  swiperConfig: any = {
+    initialSlide: 0,
+    observer: true,
+    observeParents: true,
+  };
+
   private initIndex: number;
 
-  @ViewChild('slider', { read: ElementRef, static: true }) slider: any;
+  constructor(private modalController: ModalController, private navParams: NavParams) {}
 
-  constructor(private modalController: ModalController, private navParams: NavParams) { }
- 
   ngOnInit() {
     this.initIndex = this.navParams.get('index');
-
-    this.sliderOptions = {
+    this.swiperConfig = {
       initialSlide: this.initIndex,
+      observer: true,
+      observeParents: true,
     };
   }
 
-  slideChanged() {
+  onSlideChange() {
     // Change this from images to 'stops'
-    // this.slider.nativeElement.getActiveIndex().then(index => this.imgService.viewImage(index));
+    //this.swiper?.getActiveIndex().then(index => this.viewStops(index));
   }
+ 
 
   close() {
     this.modalController.dismiss();
   }
-
 }

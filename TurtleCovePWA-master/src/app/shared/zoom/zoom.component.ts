@@ -1,6 +1,14 @@
 import { ImageViewService } from './../../services/image-view/image-view.service';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NavParams, ModalController } from '@ionic/angular';
+import SwiperCore, { Swiper } from 'swiper';
+
+// import function to register Swiper custom elements
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
+
+SwiperCore.use([Swiper]);
 
 @Component({
   selector: 'tc-zoom',
@@ -17,7 +25,7 @@ export class ZoomComponent implements OnInit {
 
   zoomedIn = false;
 
-  @ViewChild('slider', { read: ElementRef, static: false }) slider: ElementRef;
+  @ViewChild('swiper', { read: ElementRef, static: false }) swiper: ElementRef;
 
   constructor(
     private modalController: ModalController,
@@ -40,13 +48,13 @@ export class ZoomComponent implements OnInit {
     this.viewEntered = true;
   }
 
-  slideChanged() {
-    this.slider.nativeElement.getActiveIndex().then(index => this.imgService.viewImage(index));
+  onSlideChange() {
+    this.swiper.nativeElement.getActiveIndex().then(index => this.imgService.viewImage(index));
   }
 
   zoom(zoomIn: boolean) {
     if (zoomIn === !this.zoomedIn) {
-      const zoom = this.slider.nativeElement.swiper.zoom;
+      const zoom = this.swiper.nativeElement.swiper.zoom;
       if (zoomIn) {
         zoom.in();
       } else {

@@ -197,7 +197,7 @@ export class ChecklistPage implements OnInit {
         // If species arrays are the same classes and species, then restore
         if (JSON.stringify(speciesArray) === JSON.stringify(this.speciesClass)) {
           // console.log('Running if');
-          this.speciesClass = null;
+          this.speciesClass = [];
           this.speciesClass = speciesArray
             .map(item => {
               item.expanded = false;
