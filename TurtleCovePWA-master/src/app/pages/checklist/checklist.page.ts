@@ -7,7 +7,7 @@ import { SpeciesClass } from './species-class';
 import { ZoomComponent } from 'src/app/shared/zoom/zoom.component';
 
 @Component({
-  selector: 'tc-checklist',
+  selector: 'app-checklist',
   templateUrl: './checklist.page.html',
   styleUrls: ['./checklist.page.scss']
 })
@@ -16,7 +16,7 @@ export class ChecklistPage implements OnInit {
 
   public anyExpanded = false;
 
-  public total = 101; //Change to total number of species currently. Was 0 but the code would not display the total amount 
+  public total = 0; 
   public totalFound = 0;
 
   public speciesClass = [
