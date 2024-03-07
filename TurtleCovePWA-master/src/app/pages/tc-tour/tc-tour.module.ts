@@ -11,8 +11,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 const routes: Routes = [
   {
     path: '',
-    component: TcTourPage
-  }
+    component: TcTourPage,
+  },
 ];
 
 @NgModule({
@@ -21,8 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     SharedModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
-  declarations: [TcTourPage]
+  declarations: [TcTourPage],
 })
 export class TcTourPageModule {}
