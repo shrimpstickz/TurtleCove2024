@@ -14,12 +14,13 @@ export class HomePage implements OnInit {
 
   ngOnInit() { }
 
-  // openUrl(url: string) {
-  //   this.plugins.openUrl(url);
+  //openUrl(url: string) {
+  // this.plugins.openUrl(url);
   // }
 
   buttonHandler(url: string) {
-    this.plugins.openUrl(url);
+   // this.plugins.openUrl(url);
+   window.open(url);
   }
 
 }

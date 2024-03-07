@@ -1,17 +1,15 @@
-import { Storage } from '@ionic/storage';
+import { Storage } from '@ionic/storage-angular'; // Update import for Storage
 import { ImageViewService } from 'src/app/services/image-view/image-view.service';
 import { Component, OnInit } from '@angular/core';
 import { ModalController, AlertController } from '@ionic/angular';
 import { ZoomComponent } from 'src/app/shared/zoom/zoom.component';
 
-
 @Component({
-  selector: 'tc-tc-tour',
+  selector: 'app-tc-tour', // Updated selector
   templateUrl: './tc-tour.page.html',
   styleUrls: ['./tc-tour.page.scss'],
 })
 export class TcTourPage implements OnInit {
-
   public primColor = 'primary';
 
   private totalNumberOfSigns = 55;
@@ -19,18 +17,23 @@ export class TcTourPage implements OnInit {
   private imagesLoaded = 0;
   public loading;
 
-  private signArray;
+  private signArray: any[]; // Add type for signArray
 
-  constructor(private modalCtrl: ModalController, public imgService: ImageViewService, private alertController: AlertController, private storage: Storage) { }
+  constructor(
+    private modalCtrl: ModalController,
+    public imgService: ImageViewService,
+    private alertController: AlertController,
+    private storage: Storage // Update storage import
+  ) {}
 
   ngOnInit() {
     this.loading = true;
-    this.storage.get('signs').then(signs => {
+    this.storage.create(); // Call create method
+    this.storage.get('signs').then((signs) => {
       if (signs) {
         this.signArray = signs;
-      }
-      else {
-        this.signArray = new Array(this.totalNumberOfSigns).fill({ viewed: false }).map((item, index) => ({ viewed: item.viewed, path: 'assets/img/signs/' + index + '.jpg' }));
+      } else {
+        this.signArray = new Array(this.totalNumberOfSigns).fill({ viewed: false }).map((item, index) => ({ viewed: item.viewed, path: `assets/img/signs/${index}.jpg` }));
         this.storage.set('signs', this.signArray);
       }
     }).then(() => {
@@ -39,9 +42,7 @@ export class TcTourPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    // Passes the array by reference, so any changes made to the array inside of the image viewer service are reflected here in the tc-tour class.
     this.imgService.setImages(this.signArray);
-    // console.log(this.signArray);
   }
 
   imgLoaded() {
@@ -55,8 +56,8 @@ export class TcTourPage implements OnInit {
       component: ZoomComponent,
       cssClass: 'transparent-modal',
       componentProps: {
-        index: id
-      }
+        index: id,
+      },
     });
     await modal.present();
     this.imgService.viewImage(id);
@@ -70,24 +71,19 @@ export class TcTourPage implements OnInit {
       buttons: [
         {
           text: 'No',
-          role: 'cancel'
+          role: 'cancel',
         },
         {
           text: 'Yes',
-          handler: () => this.imgService.reset()
-        }
-      ]
+          handler: () => this.imgService.reset(),
+        },
+      ],
     });
 
     await alert.present();
   }
 
   public getColor(viewed): string {
-    if (viewed) {
-      return 'medium';
-    } else {
-      return 'primary';
-    }
+    return viewed ? 'medium' : 'primary';
   }
-
 }
