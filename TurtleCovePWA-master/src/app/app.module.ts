@@ -26,12 +26,13 @@ register();
   imports: [
 
     BrowserModule,
+    ZoomComponent,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }),
     SharedModule,
-    HttpClientModule,
+    HttpClientModule
    // NgxUsefulSwiperModule
    
   ],

@@ -51,7 +51,7 @@ export class TcTourPage implements OnInit {
     }
   }
 
-  async showZoom(id) {
+  async showZoom(id: any) {
     const modal = await this.modalCtrl.create({
       component: ZoomComponent,
       cssClass: 'transparent-modal',
