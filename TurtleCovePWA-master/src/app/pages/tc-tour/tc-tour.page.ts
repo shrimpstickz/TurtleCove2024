@@ -15,7 +15,7 @@ export class TcTourPage implements OnInit {
   private totalNumberOfSigns = 55;
 
   private imagesLoaded = 0;
-  public loading;
+  public loading: boolean;
 
   private signArray: any[]; // Add type for signArray
 
@@ -51,7 +51,7 @@ export class TcTourPage implements OnInit {
     }
   }
 
-  async showZoom(id: any) {
+  async showZoom(id) {
     const modal = await this.modalCtrl.create({
       component: ZoomComponent,
       cssClass: 'transparent-modal',
@@ -83,7 +83,7 @@ export class TcTourPage implements OnInit {
     await alert.present();
   }
 
-  public getColor(viewed): string {
+  public getColor(viewed: any): string {
     return viewed ? 'medium' : 'primary';
   }
 }
