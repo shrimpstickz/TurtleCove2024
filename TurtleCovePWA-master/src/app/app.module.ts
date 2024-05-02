@@ -14,7 +14,7 @@ import { Swiper }  from 'swiper';
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 import { GwStopViewerComponent } from './pages/gw-tour/gw-stops/gw-stop-viewer/gw-stop-viewer.component';
-import { ZoomComponent } from './shared/zoom/zoom.component';
+import { ZoomComponent } from 'src/app/shared/zoom/zoom.component';  //was ./shared/zoom/zoom.component
 // register Swiper custom elements
 register();
 
@@ -32,6 +32,7 @@ register();
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }),
     SharedModule,
+    IonicRouteStrategy,
     HttpClientModule
    // NgxUsefulSwiperModule
    
